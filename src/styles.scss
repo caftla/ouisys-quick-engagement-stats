@@ -1,0 +1,77 @@
+.App {
+  font-family: sans-serif;
+  min-width: 800px;
+}
+.engagement_summary {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: solid 1px silver;
+  margin: 1em 0 1em 0;
+  padding: 1em;
+  > div {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    > span {
+      flex: 1;
+    }
+  }
+}
+
+.events-timeline {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  > span {
+    display: block;
+    outline: solid 0.1px rgba(200,200,200,0.2);
+    padding: 0.2em;
+    
+    &.ip {
+      width: 120px;
+    }
+    &.date {
+      width: 160px;
+    }
+    &.msisdn {
+      width: 110px;
+    }
+
+    
+    &.event {
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 0;
+      outline: solid 0.1px rgba(200,200,200,0.1);
+      
+    }
+    &:nth-child(4) {
+      border-left: solid 1px silver;
+    }
+
+    &.Pre-Flow {
+      background-color: green;
+    }
+    &.Flow {
+      background-color: blue;
+      &[class$="-success"] {
+        outline: solid 3px rgb(72, 250, 72);
+      }
+    }
+
+    &.recede {
+      background-color: red;
+    }
+  }
+}
+
+.tooltip-container {
+  max-width: 400px;
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
